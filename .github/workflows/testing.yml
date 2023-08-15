@@ -1,6 +1,7 @@
 name: Test react
 on: push
 jobs:
+  test:
     runs-on: ubuntu-latest
     steps:
       - name: Get the repo code
