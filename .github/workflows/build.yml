@@ -1,0 +1,17 @@
+name: Build
+on: [push, workflow_dispatch]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 1. Get code
+        uses: actions/checkout@v3
+      - name: 2. Install deps
+        run: npm ci
+      - name: 3. Build project
+        run: npm run build
+      - name: 4. Upload artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          path: build
+          name: build-files
