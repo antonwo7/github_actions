@@ -21,7 +21,7 @@ jobs:
       - name: Tet app
         run: npm run test
   build:
-    needs: lint
+    needs: test
     strategy:
       matrix:
         node-version: [14, 18]
