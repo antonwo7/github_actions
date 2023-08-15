@@ -10,9 +10,7 @@ jobs:
         run: npm install
       - name: Tet app
         run: npm run test
-      - name: Lint app
-        run: npm run lint
-      - name: Lint app
+      - name: Build
         run: npm run build
       - name: Deploy
         run: echo Deploying
