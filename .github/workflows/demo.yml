@@ -2,7 +2,11 @@ name: Demo workflow
 on: workflow_dispatch
 jobs:
   print_demo: 
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     steps: 
       - name: Print to console
         run: echo Hello github actions
+      - name: Print a few lines
+        run: |
+          echo Firts line
+          echo Second line
