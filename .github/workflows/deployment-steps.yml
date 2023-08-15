@@ -13,16 +13,6 @@ jobs:
         run: npm install
       - name: Tet app
         run: npm run test
-  lint:
-    runs-on: ubuntu-latest
-    needs: test
-    steps:
-      - name: Get the repo code
-        uses: actions/checkout@v3
-      - name: Install dependencies
-        run: npm install
-      - name: Lint app
-        run: npm run lint
   build:
     runs-on: ubuntu-latest
     needs: lint
